@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="carePathway" version="12.0.0.2017041100">
+  <ownedViewpoints name="PathwayDesigner" modelFileExtension="*.xmi">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="PathwayDesigner" domainClass="pathwayMetamodel::Pathway" enablePopupBars="true">
+      <metamodel href="../../PathwayMetamodel/model/pathwayMetamodel.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="Information" semanticCandidatesExpression="feature:element" domainClass="pathwayMetamodel::Information">
+          <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Discharge" semanticCandidatesExpression="feature:element" domainClass="pathwayMetamodel::Discharge">
+          <style xsi:type="style:DotDescription" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Referral" semanticCandidatesExpression="feature:element" domainClass="pathwayMetamodel::Referral">
+          <style xsi:type="style:LozengeNodeDescription" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Pause" semanticCandidatesExpression="feature:element" domainClass="pathwayMetamodel::Pause">
+          <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Sequence" sourceMapping="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@nodeMappings[name='Discharge'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@nodeMappings[name='Information'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@nodeMappings[name='Pause'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@nodeMappings[name='Referral'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='AuxCond'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Treatment'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Prescription']" targetMapping="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@nodeMappings[name='Discharge'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@nodeMappings[name='Information'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@nodeMappings[name='Pause'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@nodeMappings[name='Referral'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='AuxCond'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Treatment'] //@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Prescription']" targetFinderExpression="feature:inputStep" sourceFinderExpression="feature:outputStep" domainClass="pathwayMetamodel::Sequence" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelExpression="feature:name">
+              <labelFormat>bold</labelFormat>
+              <labelFormat>italic</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="AuxCond" semanticCandidatesExpression="feature:element" domainClass="pathwayMetamodel::AuxiliaryConduct" childrenPresentation="List">
+          <subNodeMappings name="Question" semanticCandidatesExpression="feature:questions" domainClass="pathwayMetamodel::Question">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:text" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" widthComputationExpression="20" heightComputationExpression="20">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Treatment" semanticCandidatesExpression="feature:element" domainClass="pathwayMetamodel::Treatment">
+          <subNodeMappings name="Exam" semanticCandidatesExpression="feature:examination" domainClass="pathwayMetamodel::Examination">
+            <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelExpression="feature:url" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Medication" semanticCandidatesExpression="feature:medication" domainClass="pathwayMetamodel::Medication">
+            <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Procedure" semanticCandidatesExpression="feature:procedure" domainClass="pathwayMetamodel::Procedure">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:url" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Admission" semanticCandidatesExpression="feature:admission" domainClass="pathwayMetamodel::Admission">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:url" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" widthComputationExpression="0" heightComputationExpression="10">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Prescription" semanticCandidatesExpression="feature:element" domainClass="pathwayMetamodel::Prescription" childrenPresentation="List">
+          <subNodeMappings name="Item" semanticCandidatesExpression="feature:item" domainClass="pathwayMetamodel::Item">
+            <style xsi:type="style:SquareDescription" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" widthComputationExpression="0" heightComputationExpression="10">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Process" semanticCandidatesExpression="feature:element" domainClass="pathwayMetamodel::Process">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Elements">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Information" nodeMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@nodeMappings[name='Information']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="pathwayMetamodel::Information" referenceName="element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Prescription" elementsToSelect="feature:element" containerMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Prescription']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="pathwayMetamodel::Prescription" referenceName="element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Treatment" containerMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Treatment']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="pathwayMetamodel::Treatment" referenceName="element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="AuxConduct" containerMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='AuxCond']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="pathwayMetamodel::AuxiliaryConduct" referenceName="element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Referral" nodeMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@nodeMappings[name='Referral']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="pathwayMetamodel::Referral" referenceName="element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Pause" nodeMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@nodeMappings[name='Pause']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="pathwayMetamodel::Pause" referenceName="element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Process" containerMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Process']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="pathwayMetamodel::Process" referenceName="element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Sequence">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Sequence" edgeMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@edgeMappings[name='Sequence']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Medications &amp; Exams">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Item" nodeMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Prescription']/@subNodeMappings[name='Item']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="pathwayMetamodel::Item" referenceName=" item">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:instance"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Medication" nodeMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Treatment']/@subNodeMappings[name='Medication']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Exam" nodeMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Treatment']/@subNodeMappings[name='Exam']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Procedure" nodeMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Treatment']/@subNodeMappings[name='Procedure']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Admission" nodeMappings="//@ownedViewpoints[name='PathwayDesigner']/@ownedRepresentations[name='PathwayDesigner']/@defaultLayer/@containerMappings[name='Treatment']/@subNodeMappings[name='Admission']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="carePathway.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
